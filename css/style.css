@@ -1,0 +1,173 @@
+/* line 1, E:/ballons/sass/style.sass */
+*, ::after, ::befor {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 7, E:/ballons/sass/style.sass */
+html {
+  font-size: 62.5%;
+}
+
+/* line 10, E:/ballons/sass/style.sass */
+body {
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: gray;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  padding: 5rem;
+  background-color: #fff;
+}
+
+/* line 19, E:/ballons/sass/style.sass */
+.container {
+  background-color: #f7f7f7;
+  height: 94vh;
+}
+
+/* line 23, E:/ballons/sass/style.sass */
+.header {
+  height: 95vh;
+  background: url(../img/background1.png) center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+  position: relative;
+}
+
+/* line 28, E:/ballons/sass/style.sass */
+.header__logo {
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+}
+
+/* line 32, E:/ballons/sass/style.sass */
+.header__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+/* line 40, E:/ballons/sass/style.sass */
+.title-first {
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* line 44, E:/ballons/sass/style.sass */
+.title-first__main {
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 6rem;
+  display: block;
+  animation: leftTorigth 1.5s;
+  backface-visibility: hidden;
+}
+
+/* line 52, E:/ballons/sass/style.sass */
+.title-first__secondary {
+  font-weight: 200;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: 0.5rem;
+  display: block;
+  animation: rightToleft 1.5s;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+/* line 63, E:/ballons/sass/style.sass */
+.btn:link, .btn:visited {
+  text-decoration: none;
+  color: #777;
+  padding: 1.5rem 4rem;
+  background-color: #fff;
+  border-radius: 5rem;
+  display: inline-block;
+  transition: all .5s;
+  position: relative;
+  font-size: 2rem;
+}
+
+/* line 73, E:/ballons/sass/style.sass */
+.btn:link:hover, .btn:visited:hover {
+  transform: translateY(-4px);
+}
+
+/* line 75, E:/ballons/sass/style.sass */
+.btn:link:hover::after, .btn:visited:hover::after {
+  opacity: 0;
+  transform: scale(1.4, 1.7);
+}
+
+/* line 78, E:/ballons/sass/style.sass */
+.btn:link:active, .btn:visited:active {
+  tratransform: translateY(-2px);
+}
+
+/* line 80, E:/ballons/sass/style.sass */
+.btn:link::after, .btn:visited::after {
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 5rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+/* line 93, E:/ballons/sass/style.sass */
+.btn_animated {
+  animation: btnToup .5s ease-out .7s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes leftTorigth {
+  0% {
+    opacity: 0;
+    transform: translate(-10rem);
+  }
+  80% {
+    transform: translate(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes rightToleft {
+  0% {
+    opacity: 0;
+    transform: translate(10rem);
+  }
+  80% {
+    transform: translate(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+
+@keyframes btnToup {
+  0% {
+    opacity: 0;
+    transform: translate(0, 5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
